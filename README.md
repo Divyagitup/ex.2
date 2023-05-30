@@ -25,18 +25,42 @@ The result is that combinational logic circuits have no feedback, and any change
 5.	For different input combinations, generate the timing diagram.
 
 ## Simplification:
+![WhatsApp Image 2023-05-30 at 8 30 02 AM](https://github.com/Divyagitup/ex.2/assets/134514564/9f19ba79-8be4-48f8-9409-d4382831f0b0)
+![WhatsApp Image 2023-05-30 at 8 31 04 AM](https://github.com/Divyagitup/ex.2/assets/134514564/89c21594-96dd-40a5-95c7-2f9929b73c70)
+
 
 ## Truth Table:
 
-## Program:
+![WhatsApp Image 2023-05-30 at 8 30 42 AM](https://github.com/Divyagitup/ex.2/assets/134514564/a1269c0c-f5ee-464f-84da-fb0a353584cd)
+![WhatsApp Image 2023-05-30 at 8 31 04 AM (1)](https://github.com/Divyagitup/ex.2/assets/134514564/e71bb4c1-5fd2-403c-a944-576dd156865a)
 
+## Program:
+module exp2(a,b,c,d,f1,f2);
+input a,b,c,d;
+output f1,f2;
+wire bdash,ddash,p,adash,q,cdash,r,u,v,w;
+not(bdash,b);
+not(ddash,d);
+and(p,bdash,ddash);
+not(adash,a);
+and(q,adash,b,d);
+not(cdash,c);
+and(r,a,b,cdash);
+or(f1,p,q,r);
+and(u,cdash,d);
+and(v,a,c);
+and(w,b,c);
+or(f2,u,v,w);
+endmodule 
 
 ## RTL Schematic:
 
+<img width="898" alt="exp2 dia" src="https://github.com/Divyagitup/ex.2/assets/134514564/8a24f7a2-9910-486f-a541-7dbe8aac8e10">
 
 
 
 ## Timing Diagram:
+<img width="952" alt="exp 2" src="https://github.com/Divyagitup/ex.2/assets/134514564/44aaf4b1-7568-409c-afe2-3f5a8c2de6f5">
 
 
 
